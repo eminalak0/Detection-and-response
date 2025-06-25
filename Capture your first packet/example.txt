@@ -1,0 +1,19 @@
+# 1. List all network interfaces
+ip link show
+# or
+tcpdump -D
+
+# 2. Capture traffic from a specific interface (e.g., eth0)
+sudo tcpdump -i eth0
+
+# 3. Save captured traffic to a file
+sudo tcpdump -i eth0 -w capture_output.pcap
+
+# 4. Filter traffic by port (e.g., HTTP)
+sudo tcpdump -i eth0 port 80
+
+# 5. Filter traffic by protocol (e.g., ICMP)
+sudo tcpdump -i eth0 icmp
+
+# 6. View saved capture file in readable format
+tcpdump -r capture_output.pcap
