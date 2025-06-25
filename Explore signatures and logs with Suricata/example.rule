@@ -1,0 +1,17 @@
+alert icmp any any -> any any (msg:"ICMP Echo Request detected"; sid:1000001; rev:1;)
+
+
+# Run Suricata on network interface eth0 in live capture mode
+sudo suricata -i eth0
+
+# Run Suricata against a pcap file
+sudo suricata -r capture.pcap -l ./log
+
+# View alert logs
+cat ./log/fast.log
+
+# View detailed event logs (pretty print JSON if jq installed)
+cat ./log/eve.json | jq '.'
+
+# Trigger the alert by pinging an IP address
+ping 8.8.8.8
