@@ -1,0 +1,25 @@
+# Sample Incident Handler's Journal Entry
+
+**Incident ID:** 2025-06-25-001  
+**Date:** 2025-06-25  
+**Time:** 14:30 UTC  
+**Reported By:** Network Monitoring System
+
+## Incident Description  
+Unusual outbound traffic detected from host 192.168.1.10 to unknown IP addresses.
+
+## Actions Taken  
+- Verified traffic patterns using Wireshark  
+- Isolated host from network  
+- Ran malware scan on host  
+- Collected forensic evidence  
+- Notified security team and management
+
+## Outcome  
+Malware infection confirmed and eradicated. Host cleaned and restored.
+
+## Lessons Learned  
+Improve network traffic baseline monitoring and update firewall rules for suspicious IPs.
+
+---
+
